@@ -97,6 +97,4 @@ src/
 └── main.jsx                   # Entry point
 ```
 
-## License
 
-MIT
