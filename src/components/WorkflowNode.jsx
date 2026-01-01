@@ -28,7 +28,7 @@ const WorkflowNode = ({
     setSelectedConnectionKey(null);
   };
 
-  const handleLabelClick = () => {
+  const handleEditClick = () => {
     if (!isRoot) {
       setIsEditing(true);
     }
@@ -61,19 +61,30 @@ const WorkflowNode = ({
               onCancel={() => setIsEditing(false)}
             />
           ) : (
-            <span className="node-label" onClick={handleLabelClick}>
+            <span className="node-label">
               {node.label}
             </span>
           )}
-          {!isRoot && (
-            <button 
-              className="node-delete-button" 
-              onClick={() => onDeleteNode(node.id)}
-              title="Delete node"
-            >
-              ×
-            </button>
-          )}
+          <div className="node-actions">
+            {!isRoot && (
+              <>
+                <button 
+                  className="node-edit-button" 
+                  onClick={handleEditClick}
+                  title="Edit node"
+                >
+                  ✏️
+                </button>
+                <button 
+                  className="node-delete-button" 
+                  onClick={() => onDeleteNode(node.id)}
+                  title="Delete node"
+                >
+                  ×
+                </button>
+              </>
+            )}
+          </div>
         </div>
         <div className="node-type-badge">{node.type}</div>
       </div>

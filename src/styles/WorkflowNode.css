@@ -62,11 +62,35 @@
   word-break: break-word;
   padding: 0.25rem;
   border-radius: 4px;
-  transition: background-color 0.2s ease;
 }
 
-.node-label:hover {
-  background-color: rgba(0, 0, 0, 0.05);
+.node-actions {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.node-edit-button {
+  width: 28px;
+  height: 28px;
+  border: none;
+  background: #3b82f6;
+  color: white;
+  border-radius: 50%;
+  font-size: 1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+  line-height: 1;
+  padding: 0;
+}
+
+.node-edit-button:hover {
+  background: #2563eb;
+  transform: scale(1.1);
 }
 
 .node-delete-button {
