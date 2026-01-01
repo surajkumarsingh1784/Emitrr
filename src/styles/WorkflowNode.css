@@ -1,0 +1,176 @@
+.workflow-node-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.workflow-node {
+  background: white;
+  border-radius: 12px;
+  padding: 1.25rem 1.5rem;
+  min-width: 200px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  position: relative;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  margin: 0.5rem;
+}
+
+.workflow-node:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.15);
+}
+
+.workflow-node-start {
+  border: 3px solid #10b981;
+  background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%);
+}
+
+.workflow-node-action {
+  border: 3px solid #3b82f6;
+  background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);
+}
+
+.workflow-node-branch {
+  border: 3px solid #f59e0b;
+  background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+}
+
+.workflow-node-end {
+  border: 3px solid #ef4444;
+  background: linear-gradient(135deg, #fee2e2 0%, #fecaca 100%);
+}
+
+.node-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  position: relative;
+}
+
+.node-icon {
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.node-label {
+  flex: 1;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1f2937;
+  word-break: break-word;
+  padding: 0.25rem;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+
+.node-label:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.node-delete-button {
+  width: 28px;
+  height: 28px;
+  border: none;
+  background: #ef4444;
+  color: white;
+  border-radius: 50%;
+  font-size: 1.25rem;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+  line-height: 1;
+  padding: 0;
+}
+
+.node-delete-button:hover {
+  background: #dc2626;
+  transform: scale(1.1);
+}
+
+.node-type-badge {
+  margin-top: 0.5rem;
+  font-size: 0.75rem;
+  color: #6b7280;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 600;
+  text-align: center;
+}
+
+/* Connection points */
+.connection-points {
+  display: flex;
+  gap: 2rem;
+  margin-top: 1rem;
+  width: 100%;
+  justify-content: center;
+}
+
+.connection-branch {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 200px;
+}
+
+.connection-label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: white;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 0.375rem 0.875rem;
+  border-radius: 20px;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.connection-line {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.connection-line-vertical {
+  width: 3px;
+  height: 30px;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.4));
+  border-radius: 2px;
+}
+
+.add-node-button {
+  width: 36px;
+  height: 36px;
+  border: 3px solid white;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  line-height: 1;
+  padding: 0;
+  margin-top: -3px;
+}
+
+.add-node-button:hover {
+  transform: scale(1.15) rotate(90deg);
+  box-shadow: 0 6px 25px rgba(102, 126, 234, 0.4);
+}
+
+.add-node-button:active {
+  transform: scale(1.05) rotate(90deg);
+}

@@ -1,0 +1,21 @@
+.node-editor {
+  flex: 1;
+}
+
+.node-editor-input {
+  width: 100%;
+  padding: 0.375rem 0.5rem;
+  border: 2px solid #667eea;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1f2937;
+  background: white;
+  outline: none;
+  font-family: inherit;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.node-editor-input:focus {
+  box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.2);
+}
